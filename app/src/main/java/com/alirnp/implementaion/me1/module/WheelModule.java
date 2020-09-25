@@ -1,5 +1,6 @@
 package com.alirnp.implementaion.me1.module;
 
+import com.alirnp.implementaion.me1.Components.AppComponent;
 import com.alirnp.implementaion.me1.model.Ring;
 import com.alirnp.implementaion.me1.model.Tire;
 import com.alirnp.implementaion.me1.model.Wheel;
@@ -15,8 +16,6 @@ public class WheelModule {
     private Tire tire ;
     private Ring ring;
 
-
-
     @Provides
     static Wheel provideWheel(Tire tire , Ring ring){
         return new Wheel( tire , ring);
@@ -27,7 +26,6 @@ public class WheelModule {
     static Tire provideTire(){
         return new Tire();
     }
-
 
 
     @Provides

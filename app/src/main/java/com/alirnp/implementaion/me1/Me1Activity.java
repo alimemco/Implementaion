@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 import com.alirnp.implementaion.R;
 import com.alirnp.implementaion.me1.Components.ActivityComponent;
-import com.alirnp.implementaion.me1.Components.DaggerActivityComponent;
 import com.alirnp.implementaion.me1.model.Car;
 
 import javax.inject.Inject;
@@ -27,7 +26,12 @@ public class Me1Activity extends AppCompatActivity {
                 .appComponent(((MyApp)getApplication()).getAppComponent())
                 .build();*/
 
-        ((MyApp)getApplication()).getActivityComponent().inject(this);
+        ActivityComponent activityComponent = ((MyApp) getApplication()).getAppComponent().getActivityComponentBuilder()
+                .horsePower(64)
+                .engineCapacity(855)
+                .build();
+
+        activityComponent.inject(this);
 
         car.drive();
 

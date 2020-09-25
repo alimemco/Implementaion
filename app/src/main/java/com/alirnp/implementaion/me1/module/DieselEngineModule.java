@@ -3,7 +3,6 @@ package com.alirnp.implementaion.me1.module;
 import com.alirnp.implementaion.me1.Engine;
 import com.alirnp.implementaion.me1.model.DieselEngine;
 
-import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
 

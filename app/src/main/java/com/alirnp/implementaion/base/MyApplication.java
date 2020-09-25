@@ -14,6 +14,7 @@ public class MyApplication extends Application {
     NetComponent netComponent ;
     ApiServiceComponent apiServiceComponent ;
 
+
     String BASE_URL = "https://api.github.com/";
 
     @Override
@@ -28,6 +29,8 @@ public class MyApplication extends Application {
         apiServiceComponent = DaggerApiServiceComponent.builder()
                 .netComponent(netComponent)
                 .build();
+
+
     }
 
     public NetComponent getNetComponent() {
@@ -37,4 +40,6 @@ public class MyApplication extends Application {
     public ApiServiceComponent getApiServiceComponent() {
         return apiServiceComponent;
     }
+
+
 }
